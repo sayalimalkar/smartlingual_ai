@@ -1,0 +1,121 @@
+/* =====================================================
+   SMARTLINGUAL AI — GLOBAL DESIGN SYSTEM & TOKENS
+   ===================================================== */
+
+:root {
+  /* Brand Palette — Executive Emerald, Jade & Slate */
+  --emerald-primary: #10b981;
+  --emerald-hover: #059669;
+  --emerald-active: #047857;
+  --emerald-light: #34d399;
+  --emerald-neon: #00ff9d;
+  --emerald-glow: rgba(0, 255, 157, 0.32);
+  --emerald-subtle: rgba(0, 255, 157, 0.12);
+  --emerald-border: rgba(0, 255, 157, 0.28);
+
+  --accent-cyan: #0ea5e9;
+  --accent-cyan-subtle: rgba(14, 165, 233, 0.12);
+  --accent-amber: #f59e0b;
+
+  /* Executive Deep Midnight Blue & Rich Charcoal System */
+  --bg-deep: #050811;
+  --bg-surface: #090e1a;
+  --bg-card: #0f172a;
+  --bg-card-hover: #162033;
+  --bg-charcoal: #1e293b;
+  --bg-glass: rgba(15, 23, 42, 0.72);
+  --bg-glass-heavy: rgba(9, 14, 26, 0.88);
+
+  /* Typography Colors */
+  --text-main: #f8fafc;
+  --text-body: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-faint: #64748b;
+  --text-on-emerald: #ffffff;
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(148, 163, 184, 0.14);
+  --border-focus: rgba(16, 185, 129, 0.5);
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+  --shadow-emerald: 0 10px 30px rgba(16, 185, 129, 0.22);
+  --shadow-emerald-lg: 0 16px 45px rgba(16, 185, 129, 0.35);
+
+  /* Radii & Transitions */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 55%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 75% 85%, rgba(16, 185, 129, 0.07) 0%, transparent 35%);
+  background-attachment: fixed;
+  overflow-x: clip;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 5px;
+  border: 2px solid var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--emerald-primary);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+}

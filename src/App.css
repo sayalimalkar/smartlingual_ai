@@ -1,0 +1,1878 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17151f;
+  background: #ffffff;
+}
+
+button {
+  font-family: inherit;
+}
+
+.smartlingual {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: 100%;
+  height: 78px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.brand-star {
+  color: #7657e8;
+  margin-right: 5px;
+}
+
+.brand span:last-child {
+  color: #7657e8;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 35px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #66636e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar nav a:hover {
+  color: #7657e8;
+}
+
+.login {
+  border: 0;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #17151d;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  width: 100%;
+  min-height: 690px;
+  padding: 70px 7%;
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      #eee9ff 0%,
+      #ffffff 42%
+    );
+}
+
+.hero-left {
+  width: 55%;
+  padding-right: 30px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 9px 15px;
+  border-radius: 30px;
+  background: #f0ebff;
+  color: #7657e8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.hero-left h1 {
+  margin: 22px 0 0;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -4px;
+  color: #15131a;
+}
+
+.hero-left h1 span {
+  color: #7657e8;
+}
+
+.description {
+  max-width: 570px;
+  margin-top: 25px;
+  color: #686570;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.start-btn,
+.explore-btn {
+  padding: 14px 23px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.start-btn {
+  border: 0;
+  color: white;
+  background: #7657e8;
+  box-shadow: 0 10px 25px rgba(118, 87, 232, 0.25);
+}
+
+.explore-btn {
+  border: 1px solid #dddddd;
+  background: white;
+  color: #35323a;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 48px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat strong {
+  font-size: 21px;
+  color: #211e29;
+}
+
+.stat span {
+  margin-top: 5px;
+  color: #85818d;
+  font-size: 11px;
+}
+
+
+/* ================= RATING ================= */
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-left: 28px;
+  border-left: 1px solid #dedce4;
+}
+
+.stars {
+  color: #7657e8;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.rating-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-text strong {
+  font-size: 15px;
+}
+
+.rating-text span {
+  color: #85818d;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+
+/* ================= 3D GLOBE ================= */
+
+.globe {
+  width: 390px;
+  height: 390px;
+
+  position: relative;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 32% 25%,
+      #eee9ff 0%,
+      #c5b5ff 18%,
+      #9275e5 42%,
+      #6548c5 70%,
+      #302060 100%
+    );
+
+  border: 5px solid #9b83e5;
+
+  box-shadow:
+    inset -55px -40px 75px rgba(28, 15, 75, 0.55),
+    inset 25px 20px 45px rgba(255, 255, 255, 0.25),
+    0 25px 70px rgba(92, 65, 190, 0.30);
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+
+/* ================= GLOBE LIGHT ================= */
+
+.globe-light {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -45px;
+  left: -35px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.20);
+
+  filter: blur(25px);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* ================= MAP + GRID ================= */
+
+.globe-map {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  z-index: 3;
+
+  overflow: visible;
+}
+
+
+/* Globe grid */
+
+.globe-map ellipse,
+.globe-map path:not(.continent):not(.small-land) {
+
+  fill: none;
+
+  stroke: rgba(255, 255, 255, 0.28);
+
+  stroke-width: 1.2;
+
+}
+
+
+/* ================= CONTINENTS ================= */
+
+.globe-map .continent {
+
+  fill: rgba(221, 214, 255, 0.80);
+
+  stroke: rgba(255, 255, 255, 0.60);
+
+  stroke-width: 1.2;
+
+  filter: drop-shadow(
+    0 3px 5px rgba(30, 15, 80, 0.25)
+  );
+
+}
+
+
+/* India highlighted */
+
+.globe-map .india-shape {
+
+  fill: #ffffff;
+
+  stroke: #7657e8;
+
+  stroke-width: 2;
+}
+
+
+/* Japan + Korea */
+
+.globe-map .small-land {
+
+  fill: #ded6ff;
+
+  stroke: rgba(255, 255, 255, 0.7);
+
+  stroke-width: 1;
+}
+
+
+/* ================= GLOBE CENTER ================= */
+
+.globe-center {
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffffff,
+      #faf9ff 60%,
+      #eeeaff
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 15px 40px rgba(25, 15, 70, 0.28),
+    inset 0 2px 8px rgba(255,255,255,0.9);
+
+  z-index: 15;
+}
+
+.globe-center b {
+
+  font-size: 32px;
+
+  color: #7657e8;
+
+  line-height: 1;
+}
+
+.globe-center small {
+
+  color: #77727f;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  margin-top: 3px;
+}
+
+
+/* ================= COUNTRY CARDS ================= */
+
+.country {
+
+  position: absolute;
+
+  z-index: 25;
+
+  width: 76px;
+  height: 64px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7f5ff
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 12px 30px rgba(30, 20, 70, 0.22);
+
+  border: 1px solid rgba(118, 87, 232, 0.10);
+
+  transition: 0.3s ease;
+}
+
+.country:hover {
+
+  transform: translateY(-5px) scale(1.05);
+
+  box-shadow:
+    0 18px 35px rgba(75, 50, 160, 0.28);
+}
+
+.country span {
+
+  font-size: 23px;
+
+  line-height: 1;
+}
+
+.country b {
+
+  margin-top: 5px;
+
+  color: #4d4856;
+
+  font-size: 9px;
+}
+
+
+/* ================= COUNTRY POSITIONS ================= */
+
+.germany {
+
+  top: 35px;
+  left: 75px;
+}
+
+.england {
+
+  top: 80px;
+  right: 10px;
+}
+
+.japan {
+
+  right: 10px;
+  bottom: 65px;
+}
+
+.korea {
+
+  left: 15px;
+  bottom: 65px;
+}
+
+.india {
+
+  left: 45px;
+  top: 175px;
+}
+
+
+/* ================= GLOBE SHADOW ================= */
+
+.globe::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,0.18),
+      transparent 35%,
+      rgba(25,10,70,0.20) 85%
+    );
+
+  pointer-events: none;
+
+  z-index: 12;
+}
+
+/* ================= LANGUAGES ================= */
+
+.languages {
+  padding: 100px 7%;
+  text-align: center;
+  background: #faf9fd;
+  border-top: 1px solid #eeeeee;
+}
+
+.section-label {
+  color: #7657e8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.languages h2 {
+  margin: 15px 0;
+  font-size: 46px;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.languages h2 span {
+  color: #7657e8;
+}
+
+.languages > p {
+  max-width: 570px;
+  margin: auto;
+  color: #77727f;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* ================= LANGUAGE GRID ================= */
+
+.language-grid {
+  max-width: 1150px;
+  margin: 50px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.language-box {
+  min-height: 100px;
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  background: white;
+
+  border: 1px solid #e8e6ed;
+
+  border-radius: 17px;
+
+  transition: 0.25s;
+}
+
+.language-box:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 30px rgba(80,60,150,0.10);
+}
+
+.language-box > span {
+  font-size: 26px;
+  margin-right: 12px;
+}
+
+.language-box div {
+  display: flex;
+  flex-direction: column;
+}
+
+.language-box b {
+  font-size: 13px;
+}
+
+.language-box small {
+  margin-top: 4px;
+  color: #8a8691;
+  font-size: 10px;
+}
+
+.language-box > strong {
+  margin-left: auto;
+  color: #7657e8;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+  padding: 100px 7%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.features h2 {
+  margin: 15px 0 0;
+  font-size: 42px;
+}
+
+.features h2 span {
+  color: #7657e8;
+}
+
+.feature-grid {
+  max-width: 1100px;
+
+  margin: 50px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.feature-box {
+  padding: 28px 22px;
+
+  text-align: left;
+
+  background: #faf9fd;
+
+  border: 1px solid #eceaf0;
+
+  border-radius: 18px;
+}
+
+.feature-box > div {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 15px;
+  margin: 0 0 9px;
+}
+
+.feature-box p {
+  margin: 0;
+
+  color: #77727f;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 55px 7%;
+
+  text-align: center;
+
+  background: #17151d;
+
+  color: white;
+}
+
+footer h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+footer p {
+  color: #aaa6b2;
+  font-size: 12px;
+}
+
+footer small {
+  color: #77737e;
+  font-size: 10px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-left {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .stats {
+    justify-content: center;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  .language-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar nav {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .hero {
+    padding: 55px 5%;
+  }
+
+  .hero-left h1 {
+    font-size: 46px;
+    letter-spacing: -2px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .stats {
+    gap: 20px;
+  }
+
+  .rating {
+    padding-left: 15px;
+  }
+
+  .hero-right {
+    height: 430px;
+  }
+
+  .globe-wrapper {
+    transform: scale(0.70);
+  }
+
+  .language-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}/* =====================================================
+   ✨ SMARTLINGUAL AI — FINAL VISUAL POLISH
+   Small enhancement only — layout remains unchanged
+   ===================================================== */
+
+
+/* ---------- Soft glow behind the globe ---------- */
+
+.globe-wrapper::before {
+  content: "";
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  background: rgba(118, 87, 232, 0.16);
+
+  filter: blur(55px);
+
+  z-index: 0;
+
+  animation: globeGlow 4s ease-in-out infinite;
+}
+
+@keyframes globeGlow {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.55;
+  }
+}
+
+
+/* ---------- Slightly richer globe lighting ---------- */
+
+.globe {
+  box-shadow:
+    inset -55px -35px 75px rgba(25, 12, 70, 0.55),
+    inset 35px 25px 50px rgba(255, 255, 255, 0.28),
+    0 35px 80px rgba(70, 45, 150, 0.30),
+    0 0 35px rgba(118, 87, 232, 0.18);
+
+  animation: globeFloat 6s ease-in-out infinite;
+}
+
+@keyframes globeFloat {
+  0% {
+    transform: perspective(900px) rotateY(-8deg) translateY(0);
+  }
+
+  50% {
+    transform: perspective(900px) rotateY(-8deg) translateY(-5px);
+  }
+
+  100% {
+    transform: perspective(900px) rotateY(-8deg) translateY(0);
+  }
+}
+
+
+/* ---------- Country cards become slightly interactive ---------- */
+
+.country {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.country:hover {
+  transform: translateY(-5px) scale(1.04);
+
+  box-shadow:
+    0 16px 35px rgba(30, 20, 70, 0.28),
+    0 0 18px rgba(118, 87, 232, 0.15);
+}
+
+
+/* ---------- AI card subtle floating ---------- */
+
+.ai-card {
+  animation: aiFloat 4s ease-in-out infinite;
+}
+
+@keyframes aiFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- Progress card subtle floating ---------- */
+
+.progress-card {
+  animation: progressFloat 5s ease-in-out infinite;
+}
+
+@keyframes progressFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------- Center AI badge gets a soft glow ---------- */
+
+.globe-center {
+  box-shadow:
+    0 15px 35px rgba(25, 15, 70, 0.28),
+    inset 5px 5px 12px rgba(255,255,255,0.9),
+    0 0 22px rgba(118, 87, 232, 0.16);
+
+  transition: transform 0.3s ease;
+}
+
+.globe-center:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+
+/* ---------- Better button interaction ---------- */
+
+.start-btn,
+.explore-btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 30px rgba(118, 87, 232, 0.35);
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(30, 20, 70, 0.08);
+}
+
+
+/* ---------- Login button polish ---------- */
+
+.login {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.login:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(20, 15, 30, 0.18);
+}
+
+
+/* ---------- Small hover effect for language cards ---------- */
+
+.language-box {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.language-box:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px rgba(80, 60, 150, 0.12);
+}
+
+
+/* ---------- Feature cards polish ---------- */
+
+.feature-box {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 30px rgba(80, 60, 150, 0.09);
+}
+
+
+/* ---------- Rating stars ---------- */
+
+.stars {
+  text-shadow:
+    0 0 10px rgba(118, 87, 232, 0.22);
+}/* =====================================================
+   ✨ TEXT POLISH — SMARTLINGUAL AI
+   Minor visual enhancement only
+   ===================================================== */
+
+
+/* ---------- Main Hero Heading ---------- */
+
+.hero-left h1 {
+  font-weight: 800;
+  letter-spacing: -3.5px;
+
+  text-shadow:
+    0 2px 12px rgba(30, 20, 60, 0.04);
+}
+
+.hero-left h1 span {
+  background: linear-gradient(
+    90deg,
+    #7657e8,
+    #9478f2,
+    #7657e8
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: titleGradient 5s ease-in-out infinite;
+}
+
+@keyframes titleGradient {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+
+/* ---------- AI Powered Tag ---------- */
+
+.tag {
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 5px 18px rgba(118, 87, 232, 0.08);
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(118, 87, 232, 0.15);
+}
+
+
+/* ---------- Description Text ---------- */
+
+.description {
+  color: #625f6c;
+
+  letter-spacing: 0.1px;
+}
+
+
+/* ---------- Stats Text ---------- */
+
+.stat strong {
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.stat span {
+  letter-spacing: 0.2px;
+}
+
+
+/* ---------- Rating ---------- */
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.stars {
+  color: #7657e8;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+}
+
+.rating-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-text strong {
+  font-size: 14px;
+
+  font-weight: 800;
+
+  color: #24212c;
+}
+
+.rating-text span {
+  margin-top: 3px;
+
+  color: #85818d;
+
+  font-size: 10px;
+}
+
+
+/* ---------- Section Headings ---------- */
+
+.languages h2,
+.features h2 {
+  font-weight: 800;
+
+  letter-spacing: -1.8px;
+
+  text-shadow:
+    0 2px 10px rgba(30, 20, 60, 0.03);
+}
+
+.languages h2 span,
+.features h2 span {
+  background: linear-gradient(
+    90deg,
+    #7657e8,
+    #9478f2
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* ---------- Section Labels ---------- */
+
+.section-label {
+  transition: letter-spacing 0.3s ease;
+}
+
+.section-label:hover {
+  letter-spacing: 2px;
+}
+
+
+/* ---------- Language Names ---------- */
+
+.language-box b {
+  font-weight: 750;
+
+  letter-spacing: -0.1px;
+}
+
+.language-box small {
+  letter-spacing: 0.2px;
+}
+
+
+/* ---------- Feature Headings ---------- */
+
+.feature-box h3 {
+  font-weight: 750;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* ---------- Footer Brand ---------- */
+
+footer h3 {
+  font-weight: 800;
+
+  letter-spacing: -0.3px;
+}
+
+footer p {
+  letter-spacing: 0.2px;
+}
+
+
+/* ---------- Smooth text rendering ---------- */
+
+.hero-left h1,
+.description,
+.languages h2,
+.features h2,
+.language-box,
+.feature-box,
+footer {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* =====================================================
+   SMARTLINGUAL 3D WORLD MAP
+   ===================================================== */
+
+.globe {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ================= GLOBE LIGHT ================= */
+
+.globe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 28% 22%,
+      rgba(255,255,255,0.55),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 70% 75%,
+      rgba(20,10,70,0.35),
+      transparent 55%
+    );
+
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* ================= GLOBE SHINE ================= */
+
+.globe-shine {
+  position: absolute;
+
+  width: 180px;
+  height: 90px;
+
+  top: 25px;
+  left: 55px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.20);
+
+  filter: blur(18px);
+
+  transform: rotate(-25deg);
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTINENTS
+   ===================================================== */
+
+.continent {
+  position: absolute;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d8cfff,
+      #9b82df
+    );
+
+  opacity: 0.90;
+
+  filter: drop-shadow(
+    0 5px 8px rgba(25,15,70,0.20)
+  );
+
+  z-index: 1;
+}
+
+
+/* EUROPE */
+
+.continent-europe {
+  width: 82px;
+  height: 55px;
+
+  top: 75px;
+  left: 145px;
+
+  clip-path: polygon(
+    5% 35%,
+    20% 20%,
+    38% 25%,
+    48% 10%,
+    65% 22%,
+    82% 18%,
+    95% 40%,
+    78% 55%,
+    70% 72%,
+    50% 65%,
+    35% 82%,
+    20% 65%,
+    5% 70%
+  );
+}
+
+
+/* ASIA */
+
+.continent-asia {
+  width: 145px;
+  height: 105px;
+
+  top: 85px;
+  right: 45px;
+
+  clip-path: polygon(
+    0% 30%,
+    15% 18%,
+    30% 22%,
+    40% 8%,
+    58% 18%,
+    75% 10%,
+    92% 28%,
+    100% 48%,
+    85% 58%,
+    80% 75%,
+    60% 68%,
+    48% 90%,
+    35% 70%,
+    18% 78%,
+    10% 55%
+  );
+}
+
+
+/* AFRICA */
+
+.continent-africa {
+  width: 82px;
+  height: 125px;
+
+  top: 145px;
+  left: 155px;
+
+  clip-path: polygon(
+    30% 0%,
+    60% 10%,
+    78% 28%,
+    75% 48%,
+    90% 68%,
+    65% 100%,
+    45% 88%,
+    30% 70%,
+    20% 50%,
+    5% 32%,
+    15% 12%
+  );
+}
+
+
+/* AMERICA */
+
+.continent-america {
+  width: 100px;
+  height: 190px;
+
+  top: 95px;
+  left: 35px;
+
+  clip-path: polygon(
+    40% 0%,
+    65% 8%,
+    55% 22%,
+    72% 35%,
+    62% 48%,
+    72% 62%,
+    60% 78%,
+    48% 100%,
+    30% 85%,
+    35% 68%,
+    20% 52%,
+    32% 38%,
+    22% 20%
+  );
+}
+
+
+/* INDIA */
+
+.continent-india {
+  width: 45px;
+  height: 55px;
+
+  top: 175px;
+  right: 105px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f0eaff,
+      #b39be9
+    );
+
+  clip-path: polygon(
+    0% 0%,
+    100% 15%,
+    75% 45%,
+    55% 100%,
+    25% 65%
+  );
+
+  z-index: 4;
+}
+
+
+/* JAPAN */
+
+.continent-japan {
+  width: 18px;
+  height: 45px;
+
+  top: 135px;
+  right: 42px;
+
+  border-radius: 50%;
+
+  transform: rotate(25deg);
+
+  background: #e2d9ff;
+
+  z-index: 4;
+}
+
+
+/* =====================================================
+   MAP DETAILS
+   ===================================================== */
+
+.continent::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255,255,255,0.35),
+      transparent 30%
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   COUNTRY LABEL IMPROVEMENT
+   ===================================================== */
+
+.country {
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(118,87,232,0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.country:hover {
+  transform: translateY(-5px) scale(1.05);
+
+  box-shadow:
+    0 15px 35px rgba(70,45,150,0.30);
+}
+
+
+/* =====================================================
+   GLOBE DEPTH
+   ===================================================== */
+
+.globe {
+  box-shadow:
+    inset -55px -45px 90px rgba(28,15,75,0.45),
+    inset 20px 20px 45px rgba(255,255,255,0.18),
+    0 30px 70px rgba(87,61,180,0.30);
+}
+
+
+/* =====================================================
+   LANGUAGE CARDS - MORE VISUAL
+   ===================================================== */
+
+.language-box {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.language-box:hover {
+  transform: translateY(-6px);
+
+  border-color: #cfc2ff;
+
+  box-shadow:
+    0 15px 35px rgba(95,70,180,0.12);
+}
+
+
+/* LANGUAGE FLAG */
+
+.language-box > span {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #f0ebff;
+
+  font-size: 25px;
+
+  flex-shrink: 0;
+}
+
+
+/* LANGUAGE ARROW */
+
+.language-box > strong {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f0ebff;
+}
+
+
+/* =====================================================
+   SMALL SCREEN
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .continent-europe {
+    left: 110px;
+  }
+
+  .continent-asia {
+    right: 25px;
+  }
+
+  .continent-america {
+    left: 25px;
+  }
+
+  .continent-africa {
+    left: 125px;
+  }
+
+  .continent-india {
+    right: 80px;
+  }
+
+}/* =====================================================
+   AI INFORMATION BOX
+   ===================================================== */
+
+.ai-info-box {
+  position: relative;
+  z-index: 30;
+
+  width: 390px;
+  min-height: 88px;
+
+  margin-top: 28px;
+
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(118, 87, 232, 0.14);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 40px rgba(40, 25, 90, 0.12),
+    0 0 25px rgba(118, 87, 232, 0.06);
+
+  backdrop-filter: blur(12px);
+
+  animation: aiInfoFloat 5s ease-in-out infinite;
+}
+
+
+/* Individual information item */
+
+.ai-info-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  flex: 1;
+}
+
+
+/* Icons */
+
+.ai-info-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #f0ebff;
+
+  color: #7657e8;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 15px rgba(118, 87, 232, 0.10);
+}
+
+
+/* Progress check icon */
+
+.progress-icon {
+  font-size: 20px;
+  color: #7657e8;
+}
+
+
+/* Text area */
+
+.ai-info-text {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+
+/* Main title */
+
+.ai-info-text b {
+  color: #24212c;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* Subtitle */
+
+.ai-info-text small {
+  margin-top: 4px;
+
+  color: #85818d;
+
+  font-size: 9px;
+
+  white-space: nowrap;
+}
+
+
+/* Divider between the two cards */
+
+.ai-info-divider {
+  width: 1px;
+  height: 42px;
+
+  background: #e6e2ef;
+
+  flex-shrink: 0;
+}
+
+
+/* Floating animation */
+
+@keyframes aiInfoFloat {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =====================================================
+   GLOBE WRAPPER
+   ===================================================== */
+
+.globe-wrapper {
+  position: relative;
+
+  width: 390px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =====================================================
+   COUNTRY FLAGS
+   ===================================================== */
+
+.country span {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  margin-bottom: 2px;
+}
+
+
+/* Make country names cleaner */
+
+.country b {
+  margin-top: 3px;
+
+  color: #4d4856;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+/* =====================================================
+   COUNTRY CARD POLISH
+   ===================================================== */
+
+.country {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(247, 245, 255, 0.96)
+    );
+
+  border: 1px solid rgba(118, 87, 232, 0.13);
+
+  box-shadow:
+    0 12px 30px rgba(30, 20, 70, 0.20),
+    0 0 15px rgba(118, 87, 232, 0.05);
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .ai-info-box {
+    width: 340px;
+
+    padding: 14px 15px;
+
+    gap: 12px;
+  }
+
+  .ai-info-item {
+    gap: 8px;
+  }
+
+  .ai-info-icon {
+    width: 36px;
+    height: 36px;
+
+    font-size: 17px;
+  }
+
+  .ai-info-text b {
+    font-size: 11px;
+  }
+
+  .ai-info-text small {
+    font-size: 8px;
+  }
+
+}
